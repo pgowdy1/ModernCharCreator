@@ -1,17 +1,12 @@
-package application;
+package character.model;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Random;
 
-public class Character {
-
-	private String characterName;
-	private String race;
+public class Attributes {
+	
 	private HashMap<String, Integer> charAttributes = new HashMap<String, Integer>(6);
-
-	public Character() {
-
-	}
-
+	
 	public void rollAttributes(int method) {
 		Random attributeRoller = new Random();
 		switch (method) {
@@ -47,13 +42,8 @@ public class Character {
 		}
 	}
 	
-	public void chooseRace(String playerRace) {
-		Race chosenRace = new Race(playerRace);
-		
-		if(chosenRace.checkRaceRestrictions(charAttributes)) {
-			this.race = playerRace; 
-		}
-				
+	private HashMap<String, Integer> getCharAttributes() {
+		return charAttributes; 
 	}
 
 }
