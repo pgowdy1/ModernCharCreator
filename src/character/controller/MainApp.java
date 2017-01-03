@@ -18,11 +18,10 @@ public class MainApp extends Application {
 
 	private Stage primaryStage;
 	private BorderPane rootLayout;
-	private ObservableList<Character> characterList = FXCollections.observableArrayList();
+	private Character character;
 	
 	public MainApp() {
-		Character workingCharacter = new Character(); 
-		characterList.add(workingCharacter);
+		this.character = new Character();		
 	}
 	
 	@Override
@@ -31,7 +30,8 @@ public class MainApp extends Application {
 		this.primaryStage.setTitle("2nd Edition AD&D Character Creator");
 		
 		initRootLayout();
-		showCharacterOverview(); 
+		showCharacterOverview();
+		showMainMenu();
 	}
 	
 	
@@ -53,26 +53,34 @@ public class MainApp extends Application {
 		
 	}
 	
+	/*Initialize and display the main Character Overview Window. 
+		this window includes a brief overview of all the characteristics
+		of the character that is being created.
+	*/
 	public void showCharacterOverview() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("/character/view/CharacterOverview.fxml"));
 			AnchorPane characterOverview = loader.load();
 			
-			rootLayout.setCenter(characterOverview);
+			rootLayout.setLeft(characterOverview);
 			CharacterOverviewController controller = loader.getController(); 
-			controller.setMainApp(this);
+			controller.setMainApp(this);			
 			
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public void generateAttributes() { 
+	public void showMainMenu() { 
 		try { 
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("/character/view/AttributeGeneration.fxml"));
-			AnchorPane characterOverview = (AnchorPane) loader.load(); 
+			loader.setLocation(MainApp.class.getResource("/character/view/MainMenu.fxml"));
+			AnchorPane MainMenu = (AnchorPane) loader.load();
+			
+			rootLayout.setCenter(MainMenu);
+			
+			
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
@@ -84,7 +92,7 @@ public class MainApp extends Application {
 	}
 	
 	public Character getCharacterData() {
-		return characterList.get(0); 
+		return this.character; 
 	}
 
 	public static void main(String[] args) {

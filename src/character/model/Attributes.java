@@ -42,7 +42,7 @@ public class Attributes {
 		}
 	}
 	
-	private HashMap<String, Integer> getCharAttributes() {
+	public HashMap<String, Integer> getCharAttributes() {
 		return charAttributes; 
 	}
 

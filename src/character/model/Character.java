@@ -1,51 +1,58 @@
 package character.model;
 
 import java.util.*;
+import character.model.Attributes;
 
 public class Character {
 
 	private String characterName;
 	private String race;
-	private HashMap<String, Integer> charAttributes = new HashMap<String, Integer>(6);
+	private HashMap<String, Integer> charAttributesMap = new HashMap<String, Integer>(6);
 
 	public Character() {
-		int playerAttributeMethodChoice = 0;  
-		Attributes charAttributes = new Attributes();
-		charAttributes.rollAttributes(playerAttributeMethodChoice); 
-
+		int playerAttributeMethodChoice = 1;  
+		Attributes characterAttributes = new Attributes();
+		characterAttributes.rollAttributes(playerAttributeMethodChoice);
+		this.charAttributesMap = characterAttributes.getCharAttributes();		
 	}
 	
 	public void chooseRace(String playerRace) {
 		Race chosenRace = new Race(playerRace);
 		
-		if(chosenRace.checkRaceRestrictions(charAttributes)) {
+		if(chosenRace.checkRaceRestrictions(charAttributesMap)) {
 			this.race = playerRace; 
 		}
 				
 	}
 	
 	public int getStrength() {
-		return charAttributes.get("Strength");
+		return charAttributesMap.get("Strength");
 	}
 	
 	public int getDexterity() {
-		return charAttributes.get("Dexterity");
+		return charAttributesMap.get("Dexterity");
 	}
 	
 	public int getConstitution() {
-		return charAttributes.get("Constitution");
+		return charAttributesMap.get("Constitution");
 	}
 	
 	public int getIntelligence() {
-		return charAttributes.get("Intelligence");
+		return charAttributesMap.get("Intelligence");
 	}
 	
 	public int getWisdom() {
-		return charAttributes.get("Wisdom");
+		return charAttributesMap.get("Wisdom");
 	}
 	
 	public int getCharisma() {
-		return charAttributes.get("Charisma");
+		return charAttributesMap.get("Charisma");
 	}
 
-}
+	public void printAttributes() {
+		
+		for(HashMap.Entry<String, Integer> entry : charAttributesMap.entrySet()) {
+			System.out.println(entry.getKey() + ": " + entry.getValue());
+		}
+	}
+}	

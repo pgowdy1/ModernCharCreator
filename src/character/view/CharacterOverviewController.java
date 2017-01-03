@@ -2,9 +2,9 @@ package character.view;
 
 import javafx.fxml.*;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import character.controller.MainApp;
 import character.model.Character; 
-import javafx.beans.property.*;
 
 public class CharacterOverviewController {
 	
@@ -26,33 +26,35 @@ public class CharacterOverviewController {
 	@FXML
 	private Label charismaLabel; 
 	
-	public CharacterOverviewController() {}
+	public CharacterOverviewController() { 
+	}
 	
 	@FXML
-	private void initialize() {
-		//clear character details
-		showCharacterAttributes(null);
-		
-		
+	private void initialize() {			
+		//Show character attributes in Overview
+		showCharacterAttributes();
 		
 	}
 	
-	private void showCharacterAttributes(Character character) {
+	private void showCharacterAttributes() {
 		if(character != null) {
 			strengthLabel.setText(Integer.toString(character.getStrength()));
+			dexterityLabel.setText(Integer.toString(character.getDexterity()));
+			constitutionLabel.setText(Integer.toString(character.getConstitution()));
+			intelligenceLabel.setText(Integer.toString(character.getIntelligence()));
+			wisdomLabel.setText(Integer.toString(character.getWisdom()));
+			charismaLabel.setText(Integer.toString(character.getCharisma()));
 		} 
 		
-		else {
-			 
+		else { 
 		}
 		
 	}
 	
 	public void setMainApp(MainApp mainApp) {
-		this.mainApp = mainApp; 
-		
+		this.mainApp = mainApp; 		
 		this.character = mainApp.getCharacterData();
-	}
-	
+		character.printAttributes();		 
+	}	
 	
 }
