@@ -14,7 +14,6 @@ public class AttributeGenerationController {
 		private MainApp mainApp; 
 		private CharacterOverviewController characterOverviewController; 
 		
-		@FXML
 		private Character character;
 		
 		@FXML
@@ -39,6 +38,11 @@ public class AttributeGenerationController {
 		}
 		
 		public void setMainApp(MainApp mainApp) {
-			this.mainApp = mainApp; 
+			this.mainApp = mainApp;
+			loadCharacter(); 
+		}
+		
+		public void loadCharacter() {
+			this.character = mainApp.getCharacterData(); 
 		}
 }
