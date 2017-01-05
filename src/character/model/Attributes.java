@@ -3,7 +3,7 @@ package character.model;
 import java.util.HashMap;
 import java.util.Random;
 
-public class Attributes {
+public class Attributes extends Character {
 	
 	private HashMap<String, Integer> charAttributes = new HashMap<String, Integer>(6);
 	

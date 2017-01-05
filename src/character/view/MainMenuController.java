@@ -1,6 +1,7 @@
 package character.view;
 
 import character.controller.MainApp;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

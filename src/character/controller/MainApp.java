@@ -10,7 +10,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.scene.layout.*;
 import javafx.collections.*;
-
+import character.view.AttributeGenerationController;
 import character.view.CharacterOverviewController; 
 import character.view.MainMenuController;
 import character.model.Character;
@@ -20,6 +20,7 @@ public class MainApp extends Application {
 	private Stage primaryStage;
 	private BorderPane rootLayout;
 	private Character character;
+	private CharacterOverviewController characterOverviewController; 
 	
 	public MainApp() {
 		this.character = new Character();		
@@ -66,8 +67,8 @@ public class MainApp extends Application {
 			AnchorPane characterOverview = loader.load();
 			
 			rootLayout.setLeft(characterOverview);
-			CharacterOverviewController controller = loader.getController(); 
-			controller.setMainApp(this);			
+			this.characterOverviewController = loader.getController(); 
+			characterOverviewController.setMainApp(this);			
 			
 		} catch(IOException e) {
 			e.printStackTrace();
@@ -98,13 +99,14 @@ public class MainApp extends Application {
 	 * pressed by the user. 
 	 */
 	public void showAttributeGeneration() {
-		try {
-			System.out.println("This method is touched.");
+		try {			
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("/character/view/AttributeGeneration.fxml"));
 			AnchorPane attributeGeneration = loader.load();
 			
 			rootLayout.setCenter(attributeGeneration);
+			AttributeGenerationController controller = loader.getController();
+			controller.setMainApp(this);
 		}
 			catch (IOException e) {
 				e.printStackTrace();
@@ -114,6 +116,14 @@ public class MainApp extends Application {
 	//Return the primaryStage
 	public Stage getPrimaryStage() {
 		return primaryStage; 
+	}
+	
+	public void updateCharacterData(Character playerCharacter) {
+		this.character = playerCharacter;
+	}
+	
+	public CharacterOverviewController getCharacterOverviewController() {
+		return this.characterOverviewController;
 	}
 	
 	public Character getCharacterData() {

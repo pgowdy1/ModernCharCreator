@@ -10,10 +10,13 @@ public class Character {
 	private HashMap<String, Integer> charAttributesMap = new HashMap<String, Integer>(6);
 
 	public Character() {
-		int playerAttributeMethodChoice = 1;  
+		
+	}
+	
+	public void rollAttributes(int methodSelection) {
 		Attributes characterAttributes = new Attributes();
-		characterAttributes.rollAttributes(playerAttributeMethodChoice);
-		this.charAttributesMap = characterAttributes.getCharAttributes();		
+		characterAttributes.rollAttributes(methodSelection);
+		this.charAttributesMap = characterAttributes.getCharAttributes();
 	}
 	
 	public void chooseRace(String playerRace) {

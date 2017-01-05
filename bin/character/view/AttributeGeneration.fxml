@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="768.0" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+<AnchorPane prefHeight="768.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="character.view.AttributeGenerationController">
    <children>
       <GridPane layoutX="14.0" layoutY="121.0" prefHeight="568.0" prefWidth="530.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="125.0">
         <columnConstraints>
@@ -74,11 +73,41 @@
             </HBox>
             <HBox alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Method I">
+                  <Button fx:id="method1Button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleGenerateAttributesMethod1" prefHeight="60.0" prefWidth="100.0" text="Method I">
                      <font>
                         <Font name="Constantia" size="15.0" />
                      </font>
                   </Button>
+               </children>
+            </HBox>
+            <HBox GridPane.columnIndex="1">
+               <children>
+                  <Label alignment="TOP_LEFT" text="Roll 3d6 for each attribute in order. " />
+               </children>
+            </HBox>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Label" />
+               </children>
+            </HBox>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Label" />
+               </children>
+            </HBox>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Label text="Label" />
+               </children>
+            </HBox>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Label text="Label" />
+               </children>
+            </HBox>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Label text="Label" />
                </children>
             </HBox>
          </children>
@@ -88,9 +117,10 @@
             <Font name="Constantia" size="42.0" />
          </font>
       </Label>
-      <ButtonBar layoutX="175.0" layoutY="714.0" prefHeight="40.0" prefWidth="200.0">
+      <ButtonBar layoutX="336.0" layoutY="693.0" prefHeight="40.0" prefWidth="200.0">
         <buttons>
-          <Button mnemonicParsing="false" text="Finish" textAlignment="CENTER" />
+          <Button mnemonicParsing="false" text="Back" textAlignment="CENTER" />
+            <Button mnemonicParsing="false" text="Finish" />
         </buttons>
       </ButtonBar>
    </children>

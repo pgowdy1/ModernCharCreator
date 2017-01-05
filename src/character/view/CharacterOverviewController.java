@@ -29,9 +29,9 @@ public class CharacterOverviewController {
 	public CharacterOverviewController() { 
 	}
 	
-	@FXML
-	private void initialize() {			
+	public void updateCharacterAttributesView() {			
 		//Show character attributes in Overview
+		character = mainApp.getCharacterData();
 		showCharacterAttributes();	
 	}
 	
@@ -51,9 +51,8 @@ public class CharacterOverviewController {
 	}
 	
 	public void setMainApp(MainApp mainApp) {
-		this.mainApp = mainApp; 		
+		this.mainApp = mainApp; 
 		this.character = mainApp.getCharacterData();
-		character.printAttributes();		 
 	}	
 	
 }
