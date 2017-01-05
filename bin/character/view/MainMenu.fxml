@@ -9,12 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="768.0" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+<AnchorPane prefHeight="768.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="character.view.MainMenuController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="261.0" layoutY="14.0" text="Main Menu" textAlignment="CENTER" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="261.0" layoutY="14.0" text="Main Menu" textAlignment="CENTER" AnchorPane.bottomAnchor="692.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="14.0">
          <font>
-            <Font name="Ebrima" size="42.0" />
+            <Font name="Constantia" size="42.0" />
          </font>
       </Label>
       <GridPane alignment="CENTER" layoutX="8.0" layoutY="79.0" prefHeight="497.0" prefWidth="532.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
@@ -31,9 +30,9 @@
          <children>
             <VBox alignment="CENTER">
                <children>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Generate Attributes" textAlignment="CENTER">
+                  <Button fx:id="generateAttributesButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleGenerateAttributesButton" text="Generate Attributes" textAlignment="CENTER">
                      <font>
-                        <Font size="22.0" />
+                        <Font name="Constantia" size="22.0" />
                      </font>
                   </Button>
                </children>

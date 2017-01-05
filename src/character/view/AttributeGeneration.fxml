@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="768.0" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+   <children>
+      <GridPane layoutX="14.0" layoutY="121.0" prefHeight="568.0" prefWidth="530.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="125.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" GridPane.rowIndex="1">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Method II">
+                     <font>
+                        <Font name="Constantia" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.rowIndex="2">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Method III">
+                     <font>
+                        <Font name="Constantia" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.rowIndex="3">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Method IV">
+                     <font>
+                        <Font name="Constantia" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.rowIndex="4">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Method V">
+                     <font>
+                        <Font name="Constantia" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.rowIndex="5">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Method VI">
+                     <font>
+                        <Font name="Constantia" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Method I">
+                     <font>
+                        <Font name="Constantia" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="24.0" prefHeight="62.0" prefWidth="477.0" text="Attribute Generation" textAlignment="CENTER" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Constantia" size="42.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="175.0" layoutY="714.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button mnemonicParsing="false" text="Finish" textAlignment="CENTER" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

@@ -32,8 +32,7 @@ public class CharacterOverviewController {
 	@FXML
 	private void initialize() {			
 		//Show character attributes in Overview
-		showCharacterAttributes();
-		
+		showCharacterAttributes();	
 	}
 	
 	private void showCharacterAttributes() {

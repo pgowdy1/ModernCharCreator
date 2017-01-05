@@ -12,6 +12,7 @@ import javafx.scene.layout.*;
 import javafx.collections.*;
 
 import character.view.CharacterOverviewController; 
+import character.view.MainMenuController;
 import character.model.Character;
 
 public class MainApp extends Application {
@@ -53,9 +54,10 @@ public class MainApp extends Application {
 		
 	}
 	
-	/*Initialize and display the main Character Overview Window. 
-		this window includes a brief overview of all the characteristics
-		of the character that is being created.
+	/* Initialize and display the main Character Overview Window. 
+	   this window includes a brief overview of all the characteristics
+	   of the character that is being created. It will always be available
+	   for view on the left side of the application window.
 	*/
 	public void showCharacterOverview() {
 		try {
@@ -72,6 +74,10 @@ public class MainApp extends Application {
 		}
 	}
 	
+	/* Initialize and display the Main Menu on the right of the
+	 * application. Options that user has to click through the
+	 * application are dispalyed in the form of buttons.
+	 */
 	public void showMainMenu() { 
 		try { 
 			FXMLLoader loader = new FXMLLoader();
@@ -79,12 +85,31 @@ public class MainApp extends Application {
 			AnchorPane MainMenu = (AnchorPane) loader.load();
 			
 			rootLayout.setCenter(MainMenu);
-			
-			
+			MainMenuController controller = loader.getController(); 
+			controller.setMainApp(this);			
+					
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
+	
+	/* Loading of the attributeGeneration window on the ride side of
+	 * the application when the Generate Attributes button is 
+	 * pressed by the user. 
+	 */
+	public void showAttributeGeneration() {
+		try {
+			System.out.println("This method is touched.");
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainApp.class.getResource("/character/view/AttributeGeneration.fxml"));
+			AnchorPane attributeGeneration = loader.load();
+			
+			rootLayout.setCenter(attributeGeneration);
+		}
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+	}	
 	
 	//Return the primaryStage
 	public Stage getPrimaryStage() {
