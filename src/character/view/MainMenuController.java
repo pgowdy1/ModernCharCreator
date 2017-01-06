@@ -16,6 +16,12 @@ public class MainMenuController {
 	
 	@FXML
 	private Button generateAttributesButton;
+	@FXML
+	private Button raceSelectionButton;
+	@FXML
+	private Button classSelectionButton;
+	@FXML
+	private Button alignmentSelectionButton;
 	
 	public MainMenuController() {
 		

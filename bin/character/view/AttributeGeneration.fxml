@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -28,7 +27,7 @@
          <children>
             <HBox alignment="CENTER" GridPane.rowIndex="1">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Method II">
+                  <Button fx:id="method2Button" alignment="CENTER" mnemonicParsing="false" onAction="#handleGenerateAttributesMethod2" prefHeight="60.0" prefWidth="100.0" text="Method II">
                      <font>
                         <Font name="Constantia" size="15.0" />
                      </font>
@@ -82,12 +81,18 @@
             </HBox>
             <HBox GridPane.columnIndex="1">
                <children>
-                  <Label alignment="TOP_LEFT" text="Roll 3d6 for each attribute in order. " />
+                  <Label alignment="TOP_LEFT" text="Roll 3d6 for each attribute. ">
+                     <font>
+                        <Font name="Constantia" size="14.0" />
+                     </font></Label>
                </children>
             </HBox>
             <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label text="Label" />
+                  <Label text="Roll 3d6 twice using the highest score for each attribute. ">
+                     <font>
+                        <Font name="Constantia" size="14.0" />
+                     </font></Label>
                </children>
             </HBox>
             <HBox GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -117,11 +122,7 @@
             <Font name="Constantia" size="42.0" />
          </font>
       </Label>
-      <ButtonBar layoutX="336.0" layoutY="693.0" prefHeight="40.0" prefWidth="200.0">
-        <buttons>
-          <Button mnemonicParsing="false" text="Back" textAlignment="CENTER" />
-            <Button mnemonicParsing="false" text="Finish" />
-        </buttons>
-      </ButtonBar>
+      <Button fx:id="finishButton" layoutX="420.0" layoutY="713.0" mnemonicParsing="false" onAction="#handleFinish" prefHeight="25.0" prefWidth="100.0" text="Finish" />
+      <Button fx:id="clearAttributesButton" layoutX="308.0" layoutY="713.0" mnemonicParsing="false" onAction="#handleClearAttributes" prefHeight="25.0" prefWidth="100.0" text="Clear Attributes" />
    </children>
 </AnchorPane>

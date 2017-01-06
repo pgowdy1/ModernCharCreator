@@ -7,7 +7,7 @@ public class Dwarf extends Race {
 	private HashMap<String, Integer> charAttributes;
 
 	public Dwarf(HashMap charAttributes) {
-		super("Dwarf");
+	//	super("Dwarf");
 	}
 
 	public boolean checkAttributeRequirements() {

@@ -6,8 +6,8 @@ public class Race {
 
 	private String race;
 
-	public Race(String playerRace) {
-		this.race = playerRace;
+	public Race() {
+		
 	}
 
 	public boolean checkRaceRestrictions(HashMap<String, Integer> charAttributes) {

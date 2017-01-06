@@ -42,7 +42,7 @@
                   </HBox>
                   <HBox alignment="CENTER" GridPane.rowIndex="1">
                      <children>
-                        <Button fx:id="generateAttributesButton1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleGenerateAttributesButton" prefWidth="250.0" text="Race Selection" textAlignment="CENTER">
+                        <Button fx:id="raceSelectionButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" text="Race Selection" textAlignment="CENTER">
                            <font>
                               <Font name="Constantia" size="22.0" />
                            </font>
@@ -51,7 +51,7 @@
                   </HBox>
                   <HBox alignment="CENTER" GridPane.rowIndex="2">
                      <children>
-                        <Button fx:id="generateAttributesButton2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleGenerateAttributesButton" prefWidth="250.0" text="Alignment Selection" textAlignment="CENTER">
+                        <Button fx:id="classSelectionButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" text="Class Selection" textAlignment="CENTER">
                            <font>
                               <Font name="Constantia" size="22.0" />
                            </font>
@@ -60,7 +60,7 @@
                   </HBox>
                   <HBox alignment="CENTER" GridPane.rowIndex="3">
                      <children>
-                        <Button fx:id="generateAttributesButton3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleGenerateAttributesButton" prefWidth="250.0" text="Not Imple" textAlignment="CENTER">
+                        <Button fx:id="alignmentSelectionButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" text="Alignment Selection" textAlignment="CENTER">
                            <font>
                               <Font name="Constantia" size="22.0" />
                            </font>
@@ -69,7 +69,7 @@
                   </HBox>
                   <HBox alignment="CENTER" GridPane.rowIndex="4">
                      <children>
-                        <Button fx:id="generateAttributesButton4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleGenerateAttributesButton" prefWidth="250.0" text="Not Imple" textAlignment="CENTER">
+                        <Button fx:id="generateAttributesButton4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" text="Proficiences" textAlignment="CENTER">
                            <font>
                               <Font name="Constantia" size="22.0" />
                            </font>

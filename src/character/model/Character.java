@@ -7,55 +7,60 @@ public class Character {
 
 	private String characterName;
 	private String race;
-	private HashMap<String, Integer> charAttributesMap = new HashMap<String, Integer>(6);
+	private String playerClass;
+	private String alignment;  
+	private Attributes characterAttributes;
+	private Race characterRace; 
 
 	public Character() {
-		
+		this.characterAttributes = new Attributes(); 
+		this.characterRace = new Race(); 
 	}
 	
 	public void rollAttributes(int methodSelection) {
-		Attributes characterAttributes = new Attributes();
 		characterAttributes.rollAttributes(methodSelection);
-		this.charAttributesMap = characterAttributes.getCharAttributes();
+	}
+	
+	public void clearAttributes() {
+		characterAttributes.clearAttributes();
 	}
 	
 	public void chooseRace(String playerRace) {
-		Race chosenRace = new Race(playerRace);
-		
-		if(chosenRace.checkRaceRestrictions(charAttributesMap)) {
+	
+		if(characterRace.checkRaceRestrictions(characterAttributes.getCharAttributes())) {
 			this.race = playerRace; 
-		}
-				
+		}			
 	}
 	
 	public int getStrength() {
-		return charAttributesMap.get("Strength");
+		return characterAttributes.getStrength();
 	}
 	
 	public int getDexterity() {
-		return charAttributesMap.get("Dexterity");
+		return characterAttributes.getDexterity();
 	}
 	
 	public int getConstitution() {
-		return charAttributesMap.get("Constitution");
+		return characterAttributes.getConstitution();
 	}
 	
 	public int getIntelligence() {
-		return charAttributesMap.get("Intelligence");
+		return characterAttributes.getIntelligence();
 	}
 	
 	public int getWisdom() {
-		return charAttributesMap.get("Wisdom");
+		return characterAttributes.getWisdom();
 	}
 	
 	public int getCharisma() {
-		return charAttributesMap.get("Charisma");
+		return characterAttributes.getCharisma();
+	}
+	
+	public Attributes getAttributes() {
+		return characterAttributes; 
 	}
 
 	public void printAttributes() {
-		
-		for(HashMap.Entry<String, Integer> entry : charAttributesMap.entrySet()) {
-			System.out.println(entry.getKey() + ": " + entry.getValue());
-		}
+			
 	}
 }	
