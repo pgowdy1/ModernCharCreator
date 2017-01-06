@@ -42,7 +42,7 @@
                   </HBox>
                   <HBox alignment="CENTER" GridPane.rowIndex="1">
                      <children>
-                        <Button fx:id="raceSelectionButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="250.0" text="Race Selection" textAlignment="CENTER">
+                        <Button fx:id="raceSelectionButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleRaceSelectionButton" prefWidth="250.0" text="Race Selection" textAlignment="CENTER">
                            <font>
                               <Font name="Constantia" size="22.0" />
                            </font>

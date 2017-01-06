@@ -27,7 +27,7 @@ public class Attributes {
 			charAttributes.put("Intelligence", method2Roll());
 			charAttributes.put("Wisdom", method2Roll());
 			charAttributes.put("Charisma", method2Roll());
-			
+			break; 
 		case 3:
 			// TODO: 3d6 Six times and assign to whichever scores player chooses
 		case 4:

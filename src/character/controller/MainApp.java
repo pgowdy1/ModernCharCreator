@@ -111,7 +111,19 @@ public class MainApp extends Application {
 			catch (IOException e) {
 				e.printStackTrace();
 			}
-	}	
+	}
+	
+	public void showRaceSelection() {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainApp.class.getResource("/character/view/RaceSelection.fxml"));
+			AnchorPane raceSelection = loader.load();
+			
+			rootLayout.setCenter(raceSelection);						
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	//Return the primaryStage
 	public Stage getPrimaryStage() {

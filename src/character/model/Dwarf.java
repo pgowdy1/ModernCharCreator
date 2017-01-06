@@ -6,8 +6,8 @@ public class Dwarf extends Race {
 
 	private HashMap<String, Integer> charAttributes;
 
-	public Dwarf(HashMap charAttributes) {
-	//	super("Dwarf");
+	public Dwarf(HashMap<String, Integer> charAttributes) {
+		this.charAttributes = charAttributes; 
 	}
 
 	public boolean checkAttributeRequirements() {
@@ -28,8 +28,7 @@ public class Dwarf extends Race {
 		} else if (charAttributes.get("Charisma") < 3 || charAttributes.get("Charisma") > 17) {
 			return false; 
 		}
-
-		updateAttributes(); 
+		 
 		return true;
 	}
 	
@@ -44,6 +43,6 @@ public class Dwarf extends Race {
 	}
 	
 	public HashMap<String, Integer> getCharAttributes(){
-		return charAttributes; 
+		return this.charAttributes; 
 	}
 }

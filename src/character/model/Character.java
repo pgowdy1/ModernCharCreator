@@ -25,10 +25,15 @@ public class Character {
 		characterAttributes.clearAttributes();
 	}
 	
-	public void chooseRace(String playerRace) {
-	
-		if(characterRace.checkRaceRestrictions(characterAttributes.getCharAttributes())) {
-			this.race = playerRace; 
+	public void chooseRace(String raceSelection) {
+		if(characterRace.checkRaceRestrictions(characterAttributes.getCharAttributes(), raceSelection)) {
+			 if(raceSelection.equals("Elf")) {
+				 this.characterRace = new Elf(characterAttributes.getCharAttributes()); 
+			 }
+			 
+			 else if(raceSelection.equals("Dwarf")) {
+				 this.characterRace = new Dwarf(characterAttributes.getCharAttributes()); 
+			 }
 		}			
 	}
 	

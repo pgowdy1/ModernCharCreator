@@ -32,6 +32,11 @@ public class MainMenuController {
 		mainApp.showAttributeGeneration();
 	}
 	
+	@FXML 
+	private void handleRaceSelectionButton(ActionEvent event) {
+		mainApp.showRaceSelection();
+	}
+	
 	public void setMainApp(MainApp mainApp) {
 		this.mainApp = mainApp; 
 	}
