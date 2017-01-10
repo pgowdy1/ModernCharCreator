@@ -3,6 +3,8 @@ package character.model;
 import java.util.*;
 
 public class Race {
+	
+	private String charRace; 
 
 	public Race() {
 		 
@@ -12,12 +14,14 @@ public class Race {
 		switch (race) {
 
 		case "Human":
+			this.charRace = "Human"; 
 			return true;
 			
 		case "Dwarf":
 			Dwarf playerRaceDwarf = new Dwarf(charAttributes);
 			if(playerRaceDwarf.checkAttributeRequirements()) {
 				playerRaceDwarf.updateAttributes();
+				this.charRace = "Dwarf"; 
 				return true;
 			} else {
 				return false;
@@ -27,6 +31,7 @@ public class Race {
 			Elf playerRaceElf = new Elf(charAttributes);
 			if(playerRaceElf.checkAttributeRequirements()) {
 				playerRaceElf.updateAttributes();
+				this.charRace = "Elf"; 
 				return true;
 			} else {
 				return false; 
@@ -39,5 +44,9 @@ public class Race {
 		}
 
 		return false;
+	}
+	
+	public String getRace() {
+		return this.charRace;
 	}
 }

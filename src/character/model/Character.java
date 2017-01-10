@@ -27,14 +27,30 @@ public class Character {
 	
 	public void chooseRace(String raceSelection) {
 		if(characterRace.checkRaceRestrictions(characterAttributes.getCharAttributes(), raceSelection)) {
-			 if(raceSelection.equals("Elf")) {
-				 this.characterRace = new Elf(characterAttributes.getCharAttributes()); 
+			 if(raceSelection.equals("Human")) {
+		//		this.characterRace = new Human(characterAttributes.getCharAttributes()); 
+			 } 			 
+			 else if(raceSelection.equals("Elf")) {
+				 this.characterRace = new Elf(characterAttributes.getCharAttributes());
+				 updateCharacterRace("Elf");
+			 }			 
+			 else if(raceSelection.equals("Dwarf")) {
+				 this.characterRace = new Dwarf(characterAttributes.getCharAttributes());
+				 updateCharacterRace("Dwarf");
 			 }
 			 
-			 else if(raceSelection.equals("Dwarf")) {
-				 this.characterRace = new Dwarf(characterAttributes.getCharAttributes()); 
-			 }
-		}			
+		}	
+		else {
+			 
+		}
+	}
+	
+	public String getRace() {
+		return this.race; 
+	}
+	
+	public void updateCharacterRace(String race) {
+		this.race = race;   
 	}
 	
 	public int getStrength() {

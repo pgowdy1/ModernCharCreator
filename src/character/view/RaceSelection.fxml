@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="768.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="768.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="character.view.RaceSelectionController">
    <children>
-      <GridPane layoutX="5.0" layoutY="99.0" prefHeight="616.0" prefWidth="540.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+      <GridPane layoutX="5.0" layoutY="99.0" prefHeight="615.0" prefWidth="540.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -24,19 +24,20 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Human" GridPane.halignment="CENTER">
+            <Button fx:id="humanButton" mnemonicParsing="false" onAction="#handleHumanButton" prefHeight="60.0" prefWidth="100.0" text="Human" GridPane.halignment="CENTER">
                <font>
                   <Font name="Constantia" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Dwarf" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <Button fx:id="dwarfButton" mnemonicParsing="false" onAction="#handleDwarfButton" prefHeight="60.0" prefWidth="100.0" text="Dwarf" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <font>
                   <Font name="Constantia" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Elf" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button fx:id="elfButton" mnemonicParsing="false" onAction="#handleElfButton" prefHeight="60.0" prefWidth="100.0" text="Elf" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="Constantia" size="15.0" />
                </font>
@@ -76,7 +77,7 @@
                   </Text>
                </children>
                <GridPane.margin>
-                  <Insets left="100.0" />
+                  <Insets left="100.0" top="20.0" />
                </GridPane.margin>
             </Group>
             <Group GridPane.columnIndex="1">
@@ -97,6 +98,9 @@
                      </font>
                   </Text>
                </children>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
             </Group>
             <Group GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
@@ -116,6 +120,9 @@
                      </font>
                   </Text>
                </children>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
             </Group>
             <Group GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
@@ -135,6 +142,9 @@
                      </font>
                   </Text>
                </children>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
             </Group>
             <Group GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
@@ -155,7 +165,7 @@
                   </Text>
                </children>
                <GridPane.margin>
-                  <Insets left="100.0" />
+                  <Insets left="100.0" top="20.0" />
                </GridPane.margin>
             </Group>
             <Group GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -177,7 +187,7 @@
                   </Text>
                </children>
                <GridPane.margin>
-                  <Insets left="100.0" />
+                  <Insets left="100.0" top="20.0" />
                </GridPane.margin>
             </Group>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adjustments" textAlignment="CENTER" underline="true" wrappingWidth="133.13671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
@@ -240,13 +250,242 @@
                         <Font name="Constantia" size="16.0" />
                      </font>
                   </Text>
-                  <Text layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Constituion -1">
+                  <Text layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Constitution -1">
                      <font>
                         <Font name="Constantia" size="16.0" />
                      </font>
                   </Text>
                </children>
             </Group>
+            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Gnome" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Halfling" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Requirements" textAlignment="CENTER" underline="true" wrappingWidth="133.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Constantia" size="19.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Requirements" textAlignment="CENTER" underline="true" wrappingWidth="133.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Constantia" size="19.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adjustments" textAlignment="CENTER" underline="true" wrappingWidth="133.13671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Constantia" size="19.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adjustments" textAlignment="CENTER" underline="true" wrappingWidth="133.13671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Constantia" size="19.0" />
+               </font>
+            </Text>
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" text="Details" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" text="Details" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Group GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Intelligence +1">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisdom -1">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dexterity +1">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Strength -1">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Text layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX: 3-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CON: 8-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="STR: 6-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Group>
+            <Group GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Text layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX: 7-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CON: 10-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="STR: 7-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Group>
+            <Group GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+               <children>
+                  <Text layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS: 3-17">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA: 3-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="INT: 6-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+               <GridPane.margin>
+                  <Insets left="100.0" top="20.0" />
+               </GridPane.margin>
+            </Group>
+            <Group GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Text layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS: 3-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA: 3-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="INT: 6-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+               <GridPane.margin>
+                  <Insets left="100.0" top="20.0" />
+               </GridPane.margin>
+            </Group>
+            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Half-Elf" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+            </Button>
+            <Group GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Text layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX: 6-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CON: 6-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="STR: 3-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Group>
+            <Group GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Text layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS: 3-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA: 3-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="INT: 4-18">
+                     <font>
+                        <Font name="Constantia" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+               <GridPane.margin>
+                  <Insets left="100.0" top="20.0" />
+               </GridPane.margin>
+            </Group>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Requirements" textAlignment="CENTER" underline="true" wrappingWidth="133.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Constantia" size="19.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adjustments" textAlignment="CENTER" underline="true" wrappingWidth="133.13671875" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Constantia" size="19.0" />
+               </font>
+            </Text>
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="67.0" text="Details" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Constantia" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Button>
          </children>
          <opaqueInsets>
             <Insets right="1.0" />
@@ -257,5 +496,7 @@
             <Font name="Constantia" size="42.0" />
          </font>
       </Text>
+      <Button layoutX="200.0" layoutY="714.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Clear Race" />
+      <Button fx:id="finishButton" layoutX="287.0" layoutY="714.0" mnemonicParsing="false" onAction="#handleFinish" prefHeight="25.0" prefWidth="81.0" text="Finish" />
    </children>
 </AnchorPane>

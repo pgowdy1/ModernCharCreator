@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class Dwarf extends Race {
 
 	private HashMap<String, Integer> charAttributes;
+	private String charRace = "Dwarf"; 
 
 	public Dwarf(HashMap<String, Integer> charAttributes) {
 		this.charAttributes = charAttributes; 

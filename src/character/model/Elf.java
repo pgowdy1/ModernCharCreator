@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class Elf extends Race {
 	
 	private HashMap<String, Integer> charAttributes;
+	private String race = "Elf";
 
 	public Elf(HashMap<String, Integer> charAttributes) {
 		this.charAttributes = charAttributes; 
@@ -46,4 +47,5 @@ public class Elf extends Race {
 	public HashMap<String, Integer> getCharAttributes(){
 		return this.charAttributes; 
 	}
+	
 }

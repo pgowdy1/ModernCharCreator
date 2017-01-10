@@ -132,7 +132,7 @@
                         </Label>
                         <HBox alignment="CENTER" GridPane.columnIndex="1">
                            <children>
-                              <Label text="None">
+                              <Label fx:id="raceLabel" text="None">
                                  <font>
                                     <Font name="Courier New Bold" size="22.0" />
                                  </font>

@@ -25,14 +25,27 @@ public class CharacterOverviewController {
 	private Label wisdomLabel;	
 	@FXML
 	private Label charismaLabel; 
+	@FXML 
+	private Label raceLabel; 
 	
 	public CharacterOverviewController() { 
 	}
 	
 	public void updateCharacterAttributesView() {			
 		//Show character attributes in Overview
-		character = mainApp.getCharacterData();
+		pullCharacterData(); 
 		showCharacterAttributes();	
+	}
+	
+	public void updateCharacterRaceView() {
+		pullCharacterData(); 
+		showCharacterRace(); 
+	}
+	
+	private void showCharacterRace() { 
+		if(character.getRace() != null) {
+			raceLabel.setText(character.getRace());
+		}
 	}
 	
 	private void showCharacterAttributes() {
@@ -54,5 +67,9 @@ public class CharacterOverviewController {
 		this.mainApp = mainApp; 
 		this.character = mainApp.getCharacterData();
 	}	
+	
+	private void pullCharacterData() {
+		this.character = mainApp.getCharacterData(); 
+	}
 	
 }
