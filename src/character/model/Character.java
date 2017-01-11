@@ -28,7 +28,8 @@ public class Character {
 	public void chooseRace(String raceSelection) {
 		if(characterRace.checkRaceRestrictions(characterAttributes.getCharAttributes(), raceSelection)) {
 			 if(raceSelection.equals("Human")) {
-		//		this.characterRace = new Human(characterAttributes.getCharAttributes()); 
+				this.characterRace = new Human(characterAttributes.getCharAttributes());
+				updateCharacterRace("Human"); 
 			 } 			 
 			 else if(raceSelection.equals("Elf")) {
 				 this.characterRace = new Elf(characterAttributes.getCharAttributes());
@@ -37,6 +38,14 @@ public class Character {
 			 else if(raceSelection.equals("Dwarf")) {
 				 this.characterRace = new Dwarf(characterAttributes.getCharAttributes());
 				 updateCharacterRace("Dwarf");
+			 }
+			 else if(raceSelection.equals("Gnome")) {
+				 this.characterRace = new Gnome(characterAttributes.getCharAttributes());
+				 updateCharacterRace("Gnome"); 
+			 }
+			 else if(raceSelection.equals("Halfling")) {
+				 this.characterRace = new Halfling(characterAttributes.getCharAttributes()); 
+				 updateCharacterRace("Halfling");
 			 }
 			 
 		}	

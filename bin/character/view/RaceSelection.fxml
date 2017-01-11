@@ -257,12 +257,12 @@
                   </Text>
                </children>
             </Group>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Gnome" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <Button fx:id="gnomeButton" mnemonicParsing="false" onAction="#handleGnomeButton" prefHeight="60.0" prefWidth="100.0" text="Gnome" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                <font>
                   <Font name="Constantia" size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Halfling" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+            <Button fx:id="halflingButton" mnemonicParsing="false" onAction="#handleHalflingButton" prefHeight="60.0" prefWidth="100.0" text="Halfling" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                <font>
                   <Font name="Constantia" size="15.0" />
                </font>
@@ -419,7 +419,7 @@
                   <Insets left="100.0" top="20.0" />
                </GridPane.margin>
             </Group>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Half-Elf" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+            <Button fx:id="halfElfButton" mnemonicParsing="false" onAction="#handleHalfElfButton" prefHeight="60.0" prefWidth="100.0" text="Half-Elf" GridPane.halignment="CENTER" GridPane.rowIndex="5">
                <font>
                   <Font name="Constantia" size="15.0" />
                </font>

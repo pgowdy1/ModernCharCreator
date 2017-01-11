@@ -36,10 +36,10 @@ public class Elf extends Race {
 	
 	public HashMap<String, Integer> updateAttributes() {
 		int Dex = this.charAttributes.get("Dexterity") + 1; 
-		this.charAttributes.put("Constitution", Dex);
+		this.charAttributes.put("Dexterity", Dex);
 		
 		int Con = this.charAttributes.get("Constitution") - 1;
-		this.charAttributes.put("Charisma", Con);
+		this.charAttributes.put("Constitution", Con);
 		
 		return getCharAttributes();
 	}
