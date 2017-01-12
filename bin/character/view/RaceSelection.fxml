@@ -496,7 +496,7 @@
             <Font name="Constantia" size="42.0" />
          </font>
       </Text>
-      <Button layoutX="200.0" layoutY="714.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Clear Race" />
+      <Button fx:id="clearRaceButton" layoutX="200.0" layoutY="714.0" mnemonicParsing="false" onAction="#handleClearRaceButton" prefHeight="25.0" prefWidth="81.0" text="Clear Race" />
       <Button fx:id="finishButton" layoutX="287.0" layoutY="714.0" mnemonicParsing="false" onAction="#handleFinish" prefHeight="25.0" prefWidth="81.0" text="Finish" />
    </children>
 </AnchorPane>

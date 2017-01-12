@@ -10,11 +10,13 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 
 public class RaceSelectionController {
-	
-	private MainApp mainApp; 
+
+	private MainApp mainApp;
 	private Character character;
+	private Character initialCharacter;
 	private CharacterOverviewController characterOverviewController;
-	
+	boolean raceIsChosen = false;
+
 	@FXML
 	Button humanButton;
 	@FXML
@@ -43,83 +45,107 @@ public class RaceSelectionController {
 	Button clearRaceButton;
 	@FXML
 	Button finishButton;
-	
-	@FXML 
+
+	@FXML
 	private void handleHumanButton(ActionEvent event) {
-		this.character.chooseRace("Human");
-		if(this.character.getRace() == "Human") {
-			mainApp.updateCharacterData(this.character); 
-			this.characterOverviewController = mainApp.getCharacterOverviewController();
-			this.characterOverviewController.updateCharacterRaceView();			
+		if (raceIsChosen == false) {
+			this.character.chooseRace("Human");
+			if (this.character.getRace() == "Human") {
+				mainApp.updateCharacterData(this.character);
+				this.characterOverviewController = mainApp.getCharacterOverviewController();
+				this.characterOverviewController.updateCharacterRaceView();
+			}
 		}
+		raceIsChosen = true;
 	}
-	
-	@FXML 
+
+	@FXML
 	private void handleDwarfButton(ActionEvent event) {
-		this.character.chooseRace("Dwarf");
-		if(this.character.getRace() == "Dwarf") {
-			mainApp.updateCharacterData(this.character);
-			this.characterOverviewController = mainApp.getCharacterOverviewController();
-			this.characterOverviewController.updateCharacterRaceView();
-			this.characterOverviewController.updateCharacterAttributesView();
+		if (raceIsChosen == false) {
+			this.character.chooseRace("Dwarf");
+			if (this.character.getRace() == "Dwarf") {
+				mainApp.updateCharacterData(this.character);
+				this.characterOverviewController = mainApp.getCharacterOverviewController();
+				this.characterOverviewController.updateCharacterRaceView();
+				this.characterOverviewController.updateCharacterAttributesView();
+			}
 		}
+		raceIsChosen = true;
 	}
-	
-	@FXML 
+
+	@FXML
 	private void handleElfButton(ActionEvent event) {
-		this.character.chooseRace("Elf"); 
-		if(this.character.getRace() == "Elf") {
-			mainApp.updateCharacterData(this.character);
-			this.characterOverviewController = mainApp.getCharacterOverviewController();
-			this.characterOverviewController.updateCharacterRaceView();
-			this.characterOverviewController.updateCharacterAttributesView();
+		if (raceIsChosen == false) {
+			this.character.chooseRace("Elf");
+			if (this.character.getRace() == "Elf") {
+				mainApp.updateCharacterData(this.character);
+				this.characterOverviewController = mainApp.getCharacterOverviewController();
+				this.characterOverviewController.updateCharacterRaceView();
+				this.characterOverviewController.updateCharacterAttributesView();
+			}
 		}
+		raceIsChosen = true;
 	}
-	
+
 	@FXML
 	private void handleGnomeButton(ActionEvent event) {
-		this.character.chooseRace("Gnome");
-		if(this.character.getRace() == "Gnome") {
-			mainApp.updateCharacterData(this.character); 
-			this.characterOverviewController = mainApp.getCharacterOverviewController();
-			this.characterOverviewController.updateCharacterRaceView();
-			this.characterOverviewController.updateCharacterAttributesView();
+		if (raceIsChosen == false) {
+			this.character.chooseRace("Gnome");
+			if (this.character.getRace() == "Gnome") {
+				mainApp.updateCharacterData(this.character);
+				this.characterOverviewController = mainApp.getCharacterOverviewController();
+				this.characterOverviewController.updateCharacterRaceView();
+				this.characterOverviewController.updateCharacterAttributesView();
+			}
 		}
+		raceIsChosen = true;
 	}
-	
+
 	@FXML
 	private void handleHalflingButton(ActionEvent event) {
-		this.character.chooseRace("Halfling");
-		if(this.character.getRace() == "Halfling") {
-			mainApp.updateCharacterData(this.character);
-			this.characterOverviewController = mainApp.getCharacterOverviewController();
-			this.characterOverviewController.updateCharacterRaceView();
-			this.characterOverviewController.updateCharacterAttributesView();
+		if (raceIsChosen == false) {
+			this.character.chooseRace("Halfling");
+			if (this.character.getRace() == "Halfling") {
+				mainApp.updateCharacterData(this.character);
+				this.characterOverviewController = mainApp.getCharacterOverviewController();
+				this.characterOverviewController.updateCharacterRaceView();
+				this.characterOverviewController.updateCharacterAttributesView();
+			}
 		}
+		raceIsChosen = true;
 	}
-	
+
 	@FXML
 	private void handleHalfElfButton(ActionEvent event) {
-		Alert halfElfAlert = new Alert(AlertType.ERROR); 
+		Alert halfElfAlert = new Alert(AlertType.ERROR);
 		halfElfAlert.setTitle("Race Selection Warning");
 		halfElfAlert.setHeaderText("Half-Elf is not supported.");
 		halfElfAlert.setContentText("This race is not yet supported by the Character Builder.");
-		
+
 		halfElfAlert.showAndWait();
 	}
-	
+
 	@FXML
 	private void handleFinish(ActionEvent event) {
-		mainApp.showMainMenu();		 
+		mainApp.showMainMenu();
 	}
-	
+
+	@FXML
+	private void handleClearRaceButton(ActionEvent event) {
+		this.character = initialCharacter;
+		this.characterOverviewController = mainApp.getCharacterOverviewController();
+		this.characterOverviewController.updateCharacterAttributesView();
+		this.characterOverviewController.updateCharacterRaceView();
+	}
+
 	public void setMainApp(MainApp mainApp) {
-		this.mainApp = mainApp; 
-		loadCharacter(); 
+		this.mainApp = mainApp;
+		loadCharacter();
 	}
-	
+
 	public void loadCharacter() {
-		this.character = mainApp.getCharacterData(); 
+		this.initialCharacter = mainApp.getCharacterData();
+		this.character = mainApp.getCharacterData();
 	}
 
 }
